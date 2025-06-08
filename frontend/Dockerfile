@@ -1,8 +1,13 @@
 # ---- Base image ----
-FROM node:20-slim
+FROM node:lts-slim
 
 # ---- Set working directory ----
 WORKDIR /app
+
+# ---- Update system packages ----
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    rm -rf /var/lib/apt/lists/*
 
 # ---- Install dependencies ----
 COPY package.json package-lock.json ./
