@@ -1,0 +1,38 @@
+# === General ===
+.env
+.env.*          # .env.dev, .env.prod, etc.
+*.log
+*.pyc
+__pycache__/
+*.sqlite3
+
+# === Node (frontend) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# === Python (backend) ===
+backend/__pycache__/
+backend/.mypy_cache/
+backend/.pytest_cache/
+backend/instance/
+backend/.venv/
+backend/venv/
+backend/.coverage
+backend/htmlcov/
+
+# === Poetry (backend) ===
+backend/poetry.lock  # (optionnel, certains préfèrent le versionner)
+backend/.pdm.toml
+
+# === VSCode / Editor Configs ===
+.vscode/
+.idea/
+*.swp
+
+# === Docker volumes ===
+db_data/
+
+# === System ===
+.DS_Store
+Thumbs.db
